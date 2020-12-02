@@ -1,3 +1,4 @@
+# [AWS Lambda with custom docker images as runtime](https://www.philschmid.de/aws-lambda-with-custom-docker-image)
 
 # Introduction
 
@@ -7,13 +8,11 @@ entirely virtual and for free. This means that it is possible for everyone to at
 lasts 3 weeks from 30.11.2020 to 18.12.2020. If you haven´t already registered do it
 [here](https://virtual.awsevents.com/).
 
-![meme](./images/meme.png)
 
 In the opening keynote, Andy Jassy presented the AWS Lambda Container Support, which allows you to use custom container
 (docker) images as a runtime for AWS Lambda. With that, we can build runtimes larger than the previous 250 MB limit, be
 it for "State-of-the-Art" NLP APIs with BERT or complex processing.
 
-![screenhsot-andy-jessy](./images/reinvent.png)
 
 photo from the keynote by Andy Jassy, rights belong to Amazon
 
@@ -212,7 +211,6 @@ docker tag docker-lambda 891511646143.dkr.ecr.eu-central-1.amazonaws.com/docker-
 
 To check if it worked we can run `docker images` and should see an image with our tag as name
 
-![docker-image](./images/docker-image.png)
 
 Finally, we push the image to ECR Registry.
 
@@ -278,15 +276,12 @@ sam deploy --guided
 
 The Guided deployment will walk through all required parameters and will create a `samconfig.toml` afterwards for us.
 
-![sam-deployment](./images/sam-deployment.png)
 
 After the successfull deployment we should see something like this.
 
-![deployment-result](./images/deployment-result.png)
 
 We take the URL from our API Gateway from the `Outputs` section and use any REST Client to test it.
 
-![insomnia](./images/insomnia.png)
 
 It worked. 🚀
 
