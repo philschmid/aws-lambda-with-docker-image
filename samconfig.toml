@@ -1,0 +1,13 @@
+version = 0.1
+[production]
+[production.deploy]
+[production.deploy.parameters]
+stack_name = "aws-lambda-custom-docker"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1dakp13tc81dv"
+s3_prefix = "aws-lambda-custom-docker"
+region = "eu-central-1"
+profile = "serverless-bert"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+
+
