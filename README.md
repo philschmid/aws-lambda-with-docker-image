@@ -195,12 +195,23 @@ the name `docker-lambda`.
 aws ecr create-repository --repository-name docker-lambda
 ```
 
+**using AWS CLI V1.x**
+
 To be able to push our images we need to login to ECR. We run an output (`$()`) from the command we retrieve from
 `ecr get-login`. (Yes, the `$` is intended).
 
 ```bash
 $(aws ecr get-login --no-include-email --region eu-central-1)
 ```
+
+**using AWS CLI V2.x**
+
+```bash
+  aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin $ECRHOST
+```
+
+read more [here](https://github.com/aws/containers-roadmap/issues/735).
+
 
 Next we need to `tag` / rename our previously created image to an ECR format. The format for this is
 `{AccountID}.dkr.ecr.{region}.amazonaws.com/{repository-name}`
