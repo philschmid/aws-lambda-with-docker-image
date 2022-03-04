@@ -1,13 +1,23 @@
 version = 0.1
-[production]
-[production.deploy]
-[production.deploy.parameters]
-stack_name = "aws-lambda-custom-docker"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1dakp13tc81dv"
-s3_prefix = "aws-lambda-custom-docker"
-region = "eu-central-1"
-profile = "serverless-bert"
+[poc]
+[poc.deploy]
+[poc.deploy.parameters]
+stack_name = "sam-lambda-app"
+s3_bucket = "mm-sre-snd-cloudformation-artifactory-store"
+s3_prefix = "sam-lambda-app"
+region = "us-east-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
+image_repositories = []
+disable_rollback = true
 
-
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-lambda-app"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-y4s5b6lvitp"
+s3_prefix = "sam-lambda-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
