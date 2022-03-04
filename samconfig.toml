@@ -1,23 +1,11 @@
 version = 0.1
-[poc]
-[poc.deploy]
-[poc.deploy.parameters]
+[default]
+[default.deploy]
+[default.deploy.parameters]
 stack_name = "sam-lambda-app"
-s3_bucket = "mm-sre-snd-cloudformation-artifactory-store"
 s3_prefix = "sam-lambda-app"
 region = "us-east-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
 disable_rollback = true
-
-[default]
-[default.deploy]
-[default.deploy.parameters]
-stack_name = "sam-lambda-app"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-y4s5b6lvitp"
-s3_prefix = "sam-lambda-app"
-region = "us-east-1"
-confirm_changeset = true
-capabilities = "CAPABILITY_IAM"
-image_repositories = []

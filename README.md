@@ -250,10 +250,10 @@ Globals:
     Timeout: 3
 
 Resources:
-  MyCustomDocker:
+  pocDockerImage:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      FunctionName: MyCustomDocker
+      FunctionName: pocDockerImage
       ImageUri: 891511646143.dkr.ecr.eu-central-1.amazonaws.com/docker-lambda:latest
       PackageType: Image
       Events:
@@ -267,7 +267,7 @@ Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
-  MyCustomDockerApi:
+  pocDockerImageApi:
     Description: 'API Gateway endpoint URL for Prod stage for Hello World function'
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/'
 ```
