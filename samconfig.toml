@@ -9,3 +9,14 @@ confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
 disable_rollback = true
+
+[dev]
+[dev.deploy]
+[dev.deploy.parameters]
+stack_name = "sam-lambda-app"
+s3_prefix = "sam-lambda-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+disable_rollback = true
