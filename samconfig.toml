@@ -7,7 +7,7 @@ s3_prefix = "sam-lambda-app"
 region = "us-east-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
-image_repositories = []
+image_repositories = [884202029588.dkr.ecr.us-east-1.amazonaws.com/docker-lambda:latest]
 disable_rollback = true
 
 [dev]
