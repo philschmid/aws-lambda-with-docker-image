@@ -12,9 +12,9 @@ pipeline {
     stages {
  
         stage('Install sam-cli') {
-          if (fileExists('aws-sam-cli-linux-x86_64.zip')) {
-          steps {            
-              sh '''
+          steps {  
+            if (fileExists('aws-sam-cli-linux-x86_64.zip')) {
+            sh '''
                rm aws-sam-cli-linux-x86_64.zip
                rm -rf sam-installation
                wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
