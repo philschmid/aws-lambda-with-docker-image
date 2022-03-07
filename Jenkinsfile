@@ -12,8 +12,8 @@ pipeline {
     stages {
  
         stage('Install sam-cli') {
-          steps {
-            if (fileExists('aws-sam-cli-linux-x86_64.zip')) {
+          if (fileExists('aws-sam-cli-linux-x86_64.zip')) {
+          steps {            
               sh '''
                rm aws-sam-cli-linux-x86_64.zip
                rm -rf sam-installation
@@ -23,6 +23,7 @@ pipeline {
                /usr/local/bin/sam --version
             '''
             }
+          }
           }
         }
         
