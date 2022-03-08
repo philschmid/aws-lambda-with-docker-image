@@ -61,8 +61,7 @@ pipeline {
         }
       }
     }
-   
-    
+       
     // Uploading Docker images into AWS ECR
     stage('Pushing to ECR') {
      steps{  
@@ -72,9 +71,7 @@ pipeline {
          }
         }
       }
-      
-     
-      
+            
       stage('Sam deployment') {
           steps{  
          script {
