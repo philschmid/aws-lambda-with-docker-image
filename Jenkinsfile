@@ -26,6 +26,7 @@ pipeline {
             }
           }
           }
+        }
         
          
         stage('Cloning Git') {
